@@ -1,0 +1,8 @@
+class Solution:
+    def twoSum(self,nums,target):
+      storage={}
+      for i,num in enumerate(nums):
+        another_number=target-num
+        if another_number in storage:
+          return (storage[another_number],i)
+        storage[num]=i
