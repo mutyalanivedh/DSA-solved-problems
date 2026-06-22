@@ -1,0 +1,9 @@
+class Solution(object):
+    def isHappy(self, n):
+        watched=set()
+        while n!=1:
+            if n in watched:
+                return False
+            watched.add(n)
+            n=sum(int(k)**2 for k in str(n))
+        return True
