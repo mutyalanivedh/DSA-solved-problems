@@ -1,0 +1,14 @@
+class Solution(object):
+    def countBinarySubstrings(self, s):
+        count=0
+        for i in range(len(s)-1):
+            left=i
+            right=i+1
+            if s[left]!=s[right]:
+                zero=s[left]
+                one=s[right]
+                while left >=0 and right<len(s) and s[left]==zero and s[right]==one:  
+                  count+=1
+                  left-=1
+                  right+=1
+        return count        
