@@ -1,0 +1,13 @@
+class Solution(object):
+    def shortestToChar(self, s, c):
+        result=[]
+        for i in range(len(s)):
+            min=len(s)
+            for j in range(len(s)):
+                if s[j]==c:
+                    dist=abs(i-j)
+                    if dist < min:
+                      min=dist
+            result.append(min)
+        return result
+                    
